@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="629479dd-2ced-465c-8076-58bbe2613151" name="Changes" comment="feat(transaction): initial setup for transaction service with controller, service, repository and models">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/config/OpenAPIConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/controller/TransactionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/InsufficientFundsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/InvalidTransactionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/TransactionNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/ValidationErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/DepositRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/TransactionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/TransferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/WithdrawalRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/TransactionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/TransactionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/repository/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/transaction-service/transaction-service.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Saaka90&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="feature/transaction-service-initial-setup" />
+                    <option name="lastUsedInstant" value="1765451565" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1765451564" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sandrakawombe/BankingApplication.git&quot;,
+    &quot;accountId&quot;: &quot;3b365d4a-2ff5-4be2-b608-16f2cb39afd8&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="36gSsD7mHVJbkO6uNnUpxPIH688" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortKey" value="BY_TIME_DESCENDING" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.TransactionServiceApplication.executor": "Run",
+    "git-widget-placeholder": "feature/transaction-service-initial-setup",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/SanBank/BankingApplication",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SanBank\BankingApplication\services\transaction-service\src\main\com\banking\transactionservice" />
+      <recent name="D:\SanBank\BankingApplication\services\transaction-service\src\main" />
+      <recent name="D:\SanBank\BankingApplication\services\transaction-service\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BankingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BankingApplication" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="629479dd-2ced-465c-8076-58bbe2613151" name="Changes" comment="" />
+      <created>1765426926595</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765426926595</updated>
+      <workItem from="1765426929011" duration="2305000" />
+      <workItem from="1765449999607" duration="4800000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added first TransactionServiceApplication.java">
+      <option name="closed" value="true" />
+      <created>1765452296223</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765452296224</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add IDE and build files to .gitignore" />
+    <MESSAGE value="Added first TransactionServiceApplication.java" />
+    <MESSAGE value="feat(transaction): initial setup for transaction service with controller, service, repository and models" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(transaction): initial setup for transaction service with controller, service, repository and models" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>
