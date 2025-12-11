@@ -1,0 +1,65 @@
+# Dockerfile Template for Banking Microservices
+# Copy this file to each service directory and rename it to "Dockerfile"
+
+# Stage 1: Build
+FROM maven:3.9-eclipse-temurin-17-alpine AS build
+WORKDIR /app
+
+# Copy parent POM and common library first for better caching
+COPY ../../pom.xml ./parent-pom.xml
+COPY ../../shared/common-lib ./shared/common-lib
+
+# Build common library
+RUN cd shared/common-lib && mvn clean install -DskipTests
+
+# Copy service POM
+COPY pom.xml .
+
+# Download dependencies (this layer is cached if dependencies don't change)
+RUN mvn dependency:go-offline -B
+
+# Copy source code
+COPY src ./src
+
+# Build the application
+RUN mvn clean package -DskipTests
+
+# Stage 2: Runtime
+FROM eclipse-temurin:17-jre-alpine
+WORKDIR /app
+
+# Create a non-root user
+RUN addgroup -S spring && adduser -S spring -G spring
+USER spring:spring
+
+# Copy the JAR from build stage
+# Note: Replace {service-name} with actual service name
+# For account-service: COPY --from=build /app/target/account-service-*.jar app.jar
+# For transaction-service: COPY --from=build /app/target/transaction-service-*.jar app.jar
+# For auth-service: COPY --from=build /app/target/auth-service-*.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
+
+# Expose port
+# For account-service: EXPOSE 8082
+# For transaction-service: EXPOSE 8083
+# For auth-service: EXPOSE 8081
+EXPOSE 8080
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1
+
+# Run the application
+ENTRYPOINT ["java", \
+  "-XX:+UseContainerSupport", \
+  "-XX:MaxRAMPercentage=75.0", \
+  "-Djava.security.egd=file:/dev/./urandom", \
+  "-jar", \
+  "app.jar"]
+
+# Usage instructions:
+# 1. Copy this file to services/account-service/Dockerfile
+# 2. Update the COPY line to match the service JAR name
+# 3. Update the EXPOSE port to match the service port
+# 4. Build: docker build -t banking/account-service:latest .
+# 5. Run: docker run -p 8082:8082 banking/account-service:latest

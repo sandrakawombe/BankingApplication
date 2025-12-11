@@ -1,0 +1,159 @@
+name: Account Service CI/CD
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'services/account-service/**'
+      - 'shared/common-lib/**'
+      - '.github/workflows/account-service.yml'
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - 'services/account-service/**'
+      - 'shared/common-lib/**'
+
+env:
+  JAVA_VERSION: '17'
+  MAVEN_OPTS: -Xmx1024m
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'maven'
+      
+      - name: Build common library
+        run: |
+          cd shared/common-lib
+          mvn clean install -DskipTests
+      
+      - name: Build Account Service
+        run: |
+          cd services/account-service
+          mvn clean compile
+      
+      - name: Run Unit Tests
+        run: |
+          cd services/account-service
+          mvn test
+      
+      - name: Run Integration Tests
+        run: |
+          cd services/account-service
+          mvn verify -P integration-tests
+      
+      - name: Generate Code Coverage Report
+        run: |
+          cd services/account-service
+          mvn jacoco:report
+      
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: services/account-service/target/site/jacoco/jacoco.xml
+          flags: account-service
+          name: account-service-coverage
+      
+      - name: Check Code Coverage
+        run: |
+          cd services/account-service
+          mvn jacoco:check
+      
+      - name: Build Docker Image (on push to main)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          cd services/account-service
+          docker build -t banking/account-service:${{ github.sha }} .
+          docker tag banking/account-service:${{ github.sha }} banking/account-service:latest
+      
+      - name: Archive Test Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: services/account-service/target/surefire-reports/
+      
+      - name: Archive Coverage Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: services/account-service/target/site/jacoco/
+
+  code-quality:
+    name: Code Quality Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'maven'
+      
+      - name: Run Checkstyle
+        run: |
+          cd services/account-service
+          mvn checkstyle:check
+        continue-on-error: true
+      
+      - name: Run SpotBugs
+        run: |
+          cd services/account-service
+          mvn spotbugs:check
+        continue-on-error: true
+
+  dependency-check:
+    name: Dependency Security Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'maven'
+      
+      - name: Check for vulnerable dependencies
+        run: |
+          cd services/account-service
+          mvn dependency-check:check
+        continue-on-error: true
+
+  notify:
+    name: Notify Team
+    runs-on: ubuntu-latest
+    needs: [build-and-test, code-quality, dependency-check]
+    if: always()
+    
+    steps:
+      - name: Notify on Success
+        if: needs.build-and-test.result == 'success'
+        run: echo "✅ Account Service build succeeded!"
+      
+      - name: Notify on Failure
+        if: needs.build-and-test.result == 'failure'
+        run: echo "❌ Account Service build failed!"
