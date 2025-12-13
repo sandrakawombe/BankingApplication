@@ -1,7 +1,5 @@
 package src.main.com.banking.transactionservice.controller;
 
-import com.banking.transactionservice.model.dto.*;
-import com.banking.transactionservice.service.TransactionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -11,6 +9,11 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import src.main.com.banking.transactionservice.model.dto.DepositRequest;
+import src.main.com.banking.transactionservice.model.dto.TransactionResponse;
+import src.main.com.banking.transactionservice.model.dto.TransferRequest;
+import src.main.com.banking.transactionservice.model.dto.WithdrawalRequest;
+import src.main.com.banking.transactionservice.service.TransactionService;
 
 import java.time.LocalDateTime;
 import java.util.List;

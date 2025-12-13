@@ -5,35 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629479dd-2ced-465c-8076-58bbe2613151" name="Changes" comment="feat(transaction): initial setup for transaction service with controller, service, repository and models">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/config/OpenAPIConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/controller/TransactionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/InsufficientFundsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/InvalidTransactionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/TransactionNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/ValidationErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/DepositRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/TransactionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/TransferRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/WithdrawalRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/TransactionStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/TransactionType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/repository/TransactionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/transaction-service/transaction-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +61,9 @@
     &quot;accountId&quot;: &quot;3b365d4a-2ff5-4be2-b608-16f2cb39afd8&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -155,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1765426926595</updated>
       <workItem from="1765426929011" duration="2305000" />
-      <workItem from="1765449999607" duration="4800000" />
+      <workItem from="1765449999607" duration="11781000" />
     </task>
     <task id="LOCAL-00001" summary="Added first TransactionServiceApplication.java">
       <option name="closed" value="true" />
@@ -165,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765452296224</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat(transaction): initial setup for transaction service with controller, service, repository and models">
+      <option name="closed" value="true" />
+      <created>1765454861582</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1765454861582</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

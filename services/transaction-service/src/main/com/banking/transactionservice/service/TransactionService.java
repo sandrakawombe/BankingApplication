@@ -1,7 +1,9 @@
 package src.main.com.banking.transactionservice.service;
 
-import com.banking.transactionservice.model.dto.*;
-import com.banking.transactionservice.model.entity.Transaction;
+import src.main.com.banking.transactionservice.model.dto.DepositRequest;
+import src.main.com.banking.transactionservice.model.dto.TransactionResponse;
+import src.main.com.banking.transactionservice.model.dto.TransferRequest;
+import src.main.com.banking.transactionservice.model.dto.WithdrawalRequest;
 
 import java.time.LocalDateTime;
 import java.util.List;
