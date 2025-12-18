@@ -1,4 +1,4 @@
-package src.main.com.banking.transactionservice.exception;
+package com.banking.transactionservice.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

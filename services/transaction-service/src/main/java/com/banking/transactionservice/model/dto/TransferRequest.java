@@ -1,4 +1,4 @@
-package src.main.com.banking.transactionservice.model.dto;
+package com.banking.transactionservice.model.dto;
 
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -12,11 +12,15 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class DepositRequest {
+public class TransferRequest {
     
-    @NotNull(message = "Account ID is required")
-    @Positive(message = "Account ID must be positive")
-    private Long accountId;
+    @NotNull(message = "Source account ID is required")
+    @Positive(message = "Source account ID must be positive")
+    private Long sourceAccountId;
+    
+    @NotNull(message = "Destination account ID is required")
+    @Positive(message = "Destination account ID must be positive")
+    private Long destinationAccountId;
     
     @NotNull(message = "Amount is required")
     @DecimalMin(value = "0.01", message = "Amount must be greater than 0")

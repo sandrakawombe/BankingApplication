@@ -1,12 +1,12 @@
-package src.main.com.banking.transactionservice.model.dto;
+package com.banking.transactionservice.model.dto;
 
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import src.main.com.banking.transactionservice.model.entity.TransactionType;
-import src.main.com.banking.transactionservice.model.entity.TransactionStatus;
+import com.banking.transactionservice.model.entity.TransactionType;
+import com.banking.transactionservice.model.entity.TransactionStatus;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

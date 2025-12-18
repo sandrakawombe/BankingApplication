@@ -1,4 +1,4 @@
-package src.main.com.banking.transactionservice.model.dto;
+package com.banking.transactionservice.model.dto;
 
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;

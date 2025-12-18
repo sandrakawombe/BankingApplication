@@ -1,4 +1,4 @@
-package src.main.com.banking.transactionservice.exception;
+package com.banking.transactionservice.exception;
 
 public class TransactionNotFoundException extends RuntimeException {
     public TransactionNotFoundException(String message) {

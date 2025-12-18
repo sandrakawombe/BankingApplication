@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="629479dd-2ced-465c-8076-58bbe2613151" name="Changes" comment="feat(transaction): initial setup for transaction service with controller, service, repository and models">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/TransactionServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/TransactionServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/config/OpenAPIConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/exception/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/InsufficientFundsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/exception/InsufficientFundsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/InvalidTransactionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/exception/InvalidTransactionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/TransactionNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/exception/TransactionNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/exception/ValidationErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/exception/ValidationErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/DepositRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/model/dto/DepositRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/TransactionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/model/dto/TransactionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/TransferRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/model/dto/TransferRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/dto/WithdrawalRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/model/dto/WithdrawalRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/model/entity/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/TransactionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/model/entity/TransactionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/model/entity/TransactionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/model/entity/TransactionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/src/main/com/banking/transactionservice/service/TransactionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/transaction-service/src/main/java/com/banking/transactionservice/service/TransactionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/transaction-service/transaction-service.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,9 +102,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Unnamed.executor": "Run",
+    "Maven.transaction-service [clean].executor": "Run",
+    "Maven.transaction-service [compile].executor": "Run",
+    "Maven.transaction-service [install].executor": "Run",
+    "Maven.transaction-service [package].executor": "Run",
+    "Maven.transaction-service [validate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.TransactionServiceApplication.executor": "Run",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "feature/transaction-service-initial-setup",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/SanBank/BankingApplication",
@@ -92,17 +124,28 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\SanBank\BankingApplication\services\transaction-service\src\main\com\banking\transactionservice" />
+      <recent name="D:\SanBank\BankingApplication\services\transaction-service\src\main\java" />
       <recent name="D:\SanBank\BankingApplication\services\transaction-service\src\main" />
+      <recent name="D:\SanBank\BankingApplication\services\transaction-service\src\main\com\banking\transactionservice" />
       <recent name="D:\SanBank\BankingApplication\services\transaction-service\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.TransactionServiceApplication">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.banking.transactionservice.TransactionServiceApplication" />
+      <module name="transaction-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BankingApplication" />
       <method v="2">
@@ -114,6 +157,28 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <configuration name="TransactionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="transaction-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.banking.transactionservice.TransactionServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.banking.transactionservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Spring Boot.TransactionServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.TransactionServiceApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -132,7 +197,8 @@
       <option name="presentableId" value="Default" />
       <updated>1765426926595</updated>
       <workItem from="1765426929011" duration="2305000" />
-      <workItem from="1765449999607" duration="11781000" />
+      <workItem from="1765449999607" duration="14786000" />
+      <workItem from="1766034213805" duration="8810000" />
     </task>
     <task id="LOCAL-00001" summary="Added first TransactionServiceApplication.java">
       <option name="closed" value="true" />
@@ -150,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765454861582</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(transaction): initial setup for transaction service with controller, service, repository and models">
+      <option name="closed" value="true" />
+      <created>1765589445897</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765589445897</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

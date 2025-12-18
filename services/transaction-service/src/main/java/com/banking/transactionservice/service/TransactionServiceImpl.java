@@ -1,21 +1,21 @@
-package src.main.com.banking.transactionservice.service;
+package com.banking.transactionservice.service;
 
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import src.main.com.banking.transactionservice.exception.InsufficientFundsException;
-import src.main.com.banking.transactionservice.exception.InvalidTransactionException;
-import src.main.com.banking.transactionservice.exception.TransactionNotFoundException;
-import src.main.com.banking.transactionservice.model.dto.DepositRequest;
-import src.main.com.banking.transactionservice.model.dto.TransactionResponse;
-import src.main.com.banking.transactionservice.model.dto.TransferRequest;
-import src.main.com.banking.transactionservice.model.dto.WithdrawalRequest;
-import src.main.com.banking.transactionservice.model.entity.Transaction;
-import src.main.com.banking.transactionservice.model.entity.TransactionStatus;
-import src.main.com.banking.transactionservice.model.entity.TransactionType;
-import src.main.com.banking.transactionservice.repository.TransactionRepository;
+import com.banking.transactionservice.exception.InsufficientFundsException;
+import com.banking.transactionservice.exception.InvalidTransactionException;
+import com.banking.transactionservice.exception.TransactionNotFoundException;
+import com.banking.transactionservice.model.dto.DepositRequest;
+import com.banking.transactionservice.model.dto.TransactionResponse;
+import com.banking.transactionservice.model.dto.TransferRequest;
+import com.banking.transactionservice.model.dto.WithdrawalRequest;
+import com.banking.transactionservice.model.entity.Transaction;
+import com.banking.transactionservice.model.entity.TransactionStatus;
+import com.banking.transactionservice.model.entity.TransactionType;
+import com.banking.transactionservice.repository.TransactionRepository;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
